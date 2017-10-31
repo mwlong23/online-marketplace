@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router'
+import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Album } from '../album.model';
 import { AlbumService } from '../album.service';
@@ -21,7 +21,7 @@ export class AlbumDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.albumId = parseInt(urlParameters['id']);
+       this.albumId = parseInt(urlParameters['id']);
     });
     this.albumToDisplay = this.albumService.getAlbumById(this.albumId);
   }
